@@ -720,7 +720,148 @@ section .container {
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
   color: #fff;
 }
+.services .project {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 80%;
+  align-self: center;
+}
+.services .project-img, .services .project-text{
+  grid-row: 1 / 2;
+}
+.services .project-img-right, .services .project-text-left{
+  grid-row: 1 / 2;
+}
+.services .project-text{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: right;
+  grid-column: 7/ -1;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 3;
+  pointer-events: none;
+  min-width: 300px;
+}
+.services .project-text-left{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  grid-column: 1/ 7;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 3;
+  pointer-events: none;
+  min-width: 300px;
+}
+.services .project-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.services .project-img{
+  width: 100%;
+  grid-column: 1 / 8;
+  z-index: 2;
+  border-radius: 4px;
+  align-self: center;
+  background-color: #18d26f69;
+  filter: grayscale(100%);
+}
+.services .project-img:hover{
+  filter: grayscale(0%);
+}
 
+.services .project-img-right{
+  width: 100%;
+  grid-column: 6 / -1;
+  z-index: 2;
+  border-radius: 4px;
+  align-self: center;
+  filter: grayscale(100%);
+}
+.services .project-img-right:hover{
+  filter: grayscale(0%);
+}
+.services .project-details{
+  width: 100%;
+  background-color: #454343;
+  padding: 25px;
+  box-shadow: 0 10px 30px -15px #000000;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  pointer-events: initial;
+  min-width: 300px;
+}
+.services .keywords{
+  display: inline;
+  margin: 0 20px 5px 0;
+  background-color: #454343c6;
+}
+.services .project-text h4, .services .project-text-left h4 {
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #18d26e;
+  margin-bottom: 10px;
+}
+.services .project-text h2, .services .project-text-left h2 {
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.services .project-text ul, .services .project-text-left ul {
+  padding: 0;
+  list-style-type: none;
+}
+.services .project-text li {
+  font-size: 12px;
+  background: rgba(42, 42, 42, 0.764);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-right: 0;
+  margin-left: 10px;
+}
+.services .project-text-left li {
+  font-size: 12px;
+  background: rgba(42, 42, 42, 0.764);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-left:0;
+  margin-right: 10;
+  margin-left: 0;
+}
+.services .project-text h5, .services .project-text-left h5 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.services .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 12px;
+  transition: 0.3s;
+  pointer-events: initial;
+}
+.services .social-links a:hover {
+  color: #18d26e;
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
