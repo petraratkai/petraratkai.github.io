@@ -754,7 +754,7 @@ section .container {
   align-items: flex-start;
   z-index: 3;
   pointer-events: none;
-  min-width: 300px;
+  min-width: 200px;
 }
 .services .project-wrapper{
   display: flex;
