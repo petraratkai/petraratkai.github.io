@@ -8,6 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #040404;
@@ -459,17 +460,52 @@ section .container {
   border-radius: 50px;
   line-height: 0;
 }
-.counts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #fff;
-}
+
 .counts .count-box p {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
+}
+
+.tooltip {/* If you want dots under the hoverable text */
+  visibility: visible;
+  display: inline-block;
+  background-color: #149ddd;
+}
+
+/* Tooltip text */
+ .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  width: 120px;
+  top: 90%;
+  left: 50%;
+  margin-left: -60px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.count-box .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.count-box:hover .tooltiptext {
+  visibility: visible;
 }
 
 /*--------------------------------------------------------------
@@ -529,6 +565,7 @@ section .container {
 }
 .interests .icon-box:hover {
   background: rgba(255, 255, 255, 0.12);
+  transform: rotate();
 }
 
 /*--------------------------------------------------------------
@@ -656,6 +693,7 @@ section .container {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
 .services .icon-box {
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
@@ -759,7 +797,6 @@ section .container {
 .services .project-wrapper{
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
   margin-top: 100px;
 }
 .services .project-img{
@@ -859,8 +896,41 @@ section .container {
   transition: 0.3s;
   pointer-events: initial;
 }
+.services .social-links .website{
+  font-weight: 10px;
+}
 .services .social-links a:hover {
   color: #18d26e;
+}
+ /* Style the button that is used to open and close the collapsible content */
+ .services .collapsible {
+  background: #18d26e;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 50px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.services .active, .collapsible:hover {
+  background: #15bb62;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.services .content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+} 
+.services .button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
 }
 /*--------------------------------------------------------------
 # Portfolio
