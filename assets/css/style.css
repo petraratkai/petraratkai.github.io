@@ -621,7 +621,7 @@ section .container {
   border-radius: 6px;
   position: relative;
   z-index: 1;
-  height: 320px;
+  height: 400px;
   vertical-align: middle;
   display: table-cell;
 }
