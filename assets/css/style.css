@@ -822,6 +822,7 @@ section .container {
   border-radius: 4px;
   align-self: center;
   filter: grayscale(100%);
+  background-color: #ffffff;
 }
 .services .project-img-right:hover{
   filter: grayscale(0%);
