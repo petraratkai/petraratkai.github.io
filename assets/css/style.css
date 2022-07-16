@@ -621,6 +621,9 @@ section .container {
   border-radius: 6px;
   position: relative;
   z-index: 1;
+  height: 320px;
+  vertical-align: middle;
+  display: table-cell;
 }
 .testimonials .swiper-pagination {
   margin-top: 20px;
@@ -805,7 +808,7 @@ section .container {
   z-index: 2;
   border-radius: 4px;
   align-self: center;
-  background-color: #18d26f69;
+  background-color: #ffffff;
   filter: grayscale(100%);
 }
 .services .project-img:hover{
